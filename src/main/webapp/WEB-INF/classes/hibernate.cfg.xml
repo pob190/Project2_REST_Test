@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Conviguration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- DataSource Info -->
+		<!-- Url -->
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@michaelunderwoodrevature.ckeplxdaedhg.us-east-2.rds.amazonaws.com:1521:ORCL</property>
+		<!-- Username/Password -->
+		<property name="hibernate.connection.username">pob190</property>
+		<property name="hibernate.connection.password">R3VatUr3Fl0R1dA</property>
+		<!-- Driver -->
+		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+
+		<!-- Type of DB Dialect -->
+		<property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+		<property name="hibernate.show_sql">true</property>
+		<!-- Level 2 Cache -->
+		<property name="hibernate.cache.use_second_level_cache">true</property>
+		<!-- Specify Caching Provider -->
+		<property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+
+		<!-- Mapped Classes -->
+		<!-- <mapping class="com.revature.pojos.HoneyPot" /> -->
+		<mapping class="com.revature.pojos.Admin"/>
+		<mapping class="com.revature.pojos.User"/>
+		<mapping class="com.revature.pojos.QuizHistory"/>
+		<mapping class="com.revature.pojos.Group"/>
+		<mapping class="com.revature.pojos.Notification"/>
+		<mapping class="com.revature.pojos.Question"/>
+		<mapping class="com.revature.pojos.Quiz"/>
+	</session-factory>
+</hibernate-configuration>
